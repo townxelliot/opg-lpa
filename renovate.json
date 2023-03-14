@@ -60,6 +60,10 @@
     {
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "matchDatasources": ["pip_requirements"],
+      "enabled": false
     }
   ]
 }
