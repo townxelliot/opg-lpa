@@ -53,23 +53,22 @@
       ],
       "prCreation": "immediate",
       "prPriority": 4,
-      "stabilityDays": 0
+      "stabilityDays": 3
     },
     {
       "matchUpdateTypes": ["major"],
       "enabled": false
     },
     {
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["composer"],
-      "matchPackageNames": [
-        "tecnickcom/tcpdf",
-        "mikehaertl/php-pdftk"
-      ],
+      "matchPackageNames": ["tecnickcom/tcpdf", "mikehaertl/php-pdftk"],
       "enabled": false
     },
     {
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres"],
+      "matchPackageNames": ["postgres", "redis", "php"],
       "enabled": false
     }
   ]
