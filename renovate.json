@@ -28,10 +28,11 @@
     "prPriority": 5
   },
   "prHourlyLimit": 10,
-  "major": {
-    "enabled": false
-  },
   "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
     {
       "description": [
         "composer and npm Minor and Patch updates",
