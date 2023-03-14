@@ -43,13 +43,17 @@
         "Dependencies",
         "Renovate"
       ],
-      "matchDatasources": [
+      "matchManagers": [
         "composer",
         "npm"
       ],
       "matchUpdateTypes": [
         "minor",
         "patch"
+      ],
+      "excludePackageNames": [
+        "tecnickcom/tcpdf",
+        "mikehaertl/php-pdftk"
       ],
       "prCreation": "immediate",
       "prPriority": 4,
@@ -60,15 +64,7 @@
       "enabled": false
     },
     {
-      "matchDatasources": ["composer"],
-      "includePackageNames": [
-        "tecnickcom/tcpdf",
-        "mikehaertl/php-pdftk"
-      ],
-      "enabled": false
-    },
-    {
-      "matchDatasources": ["dockerfile", "docker-compose"],
+      "matchManagers": ["dockerfile", "docker-compose"],
       "matchPackageNames": ["postgres"],
       "enabled": false
     }
