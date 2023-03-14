@@ -59,8 +59,6 @@
       "enabled": false
     },
     {
-      "matchDatasources": ["composer"],
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchPackageNames": [
         "tecnickcom/tcpdf",
         "mikehaertl/php-pdftk"
@@ -68,12 +66,10 @@
       "enabled": false
     },
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchDatasources": ["pip_requirements"],
       "enabled": false
     },
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchDatasources": ["dockerfile", "docker-compose"],
       "matchPackageNames": ["postgres"],
       "enabled": false
