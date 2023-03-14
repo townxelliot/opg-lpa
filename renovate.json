@@ -68,7 +68,7 @@
     {
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres", "redis", "php"],
+      "matchPackageNames": ["postgres", "redis", "php", "python"],
       "enabled": false
     }
   ]
