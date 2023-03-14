@@ -4,6 +4,7 @@
     "config:base", ":dependencyDashboard"
   ],
   "branchPrefix": "renovate-",
+  "renovateFork": true,
   "commitMessageAction": "Renovate update",
   "labels": [
     "Dependencies",
@@ -63,6 +64,12 @@
     },
     {
       "matchDatasources": ["pip_requirements"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["dockerfile", "docker-compose"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchPackageNames": ["postgres"],
       "enabled": false
     }
   ]
