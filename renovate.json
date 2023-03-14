@@ -51,16 +51,20 @@
         "minor",
         "patch"
       ],
-      "excludePackageNames": [
-        "tecnickcom/tcpdf",
-        "mikehaertl/php-pdftk"
-      ],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 0
     },
     {
       "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["composer"],
+      "matchPackageNames": [
+        "tecnickcom/tcpdf",
+        "mikehaertl/php-pdftk"
+      ],
       "enabled": false
     },
     {
