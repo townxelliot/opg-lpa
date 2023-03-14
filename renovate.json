@@ -27,12 +27,8 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 1,
   "packageRules": [
-    {
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
     {
       "description": [
         "composer and npm Minor and Patch updates",
@@ -53,9 +49,17 @@
         "minor",
         "patch"
       ],
+      "excludePackageNames": [
+        "tecnickcom/tcpdf",
+        "mikehaertl/php-pdftk"
+      ],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 0
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ]
 }
