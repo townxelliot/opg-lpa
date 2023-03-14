@@ -50,10 +50,6 @@
         "minor",
         "patch"
       ],
-      "excludePackageNames": [
-        "tecnickcom/tcpdf",
-        "mikehaertl/php-pdftk"
-      ],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 0
@@ -63,12 +59,22 @@
       "enabled": false
     },
     {
+      "matchDatasources": ["composer"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchPackageNames": [
+        "tecnickcom/tcpdf",
+        "mikehaertl/php-pdftk"
+      ],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "matchDatasources": ["pip_requirements"],
       "enabled": false
     },
     {
-      "matchDatasources": ["dockerfile", "docker-compose"],
       "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchDatasources": ["dockerfile", "docker-compose"],
       "matchPackageNames": ["postgres"],
       "enabled": false
     }
