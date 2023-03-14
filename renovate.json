@@ -66,11 +66,10 @@
       "enabled": false
     },
     {
-      "matchDatasources": ["requirements"],
+      "matchDatasources": ["pip_requirements"],
       "enabled": false
     },
     {
-      "matchDatasources": ["dockerfile", "docker-compose"],
       "matchPackageNames": ["postgres"],
       "enabled": false
     }
