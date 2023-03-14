@@ -4,7 +4,7 @@
     "config:base", ":dependencyDashboard"
   ],
   "branchPrefix": "renovate-",
-  "renovateFork": true,
+  "includeForks": true,
   "commitMessageAction": "Renovate update",
   "labels": [
     "Dependencies",
