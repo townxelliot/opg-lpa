@@ -60,6 +60,7 @@
       "enabled": false
     },
     {
+      "matchManagers": ["composer"],
       "matchPackageNames": [
         "tecnickcom/tcpdf",
         "mikehaertl/php-pdftk"
