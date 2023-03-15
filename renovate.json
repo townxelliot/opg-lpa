@@ -33,7 +33,7 @@
       "groupName": "Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePatterns": ["cypress.*"]
+      "matchPackageNames": ["cypress", "cypress/included"]
     },
     {
       "description": [
@@ -45,7 +45,7 @@
       ],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackagePatterns": ["postgres", "redis", "php", "python"],
+      "matchPackageNames": ["postgres", "redis", "php", "python"],
       "enabled": true
     },
     {
