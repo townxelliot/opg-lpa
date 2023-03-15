@@ -22,7 +22,7 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 200,
   "enabledManagers": ["dockerfile", "docker-compose", "npm", "composer", "github-actions", "gomod", "terraform"],
   "packageRules": [
     {
