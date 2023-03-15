@@ -71,6 +71,7 @@
       "groupSlug": "all-minor-patch-updates",
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
+      "excludePackagePatterns": ["cypress"],
       "matchUpdateTypes": ["minor", "patch"],
       "prCreation": "immediate",
       "prPriority": 4,
