@@ -58,12 +58,21 @@
     },
     {
       "description": [
-        "github-actions: bundle all updates together"
+        "Github Actions: bundle all updates together"
       ],
-      "labels": ["devDependencies", "Renovate", "github-actions"],
-      "groupName": "github actions updates",
+      "labels": ["devDependencies", "Renovate", "GithubActions"],
+      "groupName": "Github Actions updates",
       "matchUpdateTypes": ["minor", "patch"],
       "matchManagers": ["github-actions"]
+    },
+    {
+      "description": [
+        "Terraform: bundle all updates together"
+      ],
+      "labels": ["devDependencies", "Renovate", "Terraform"],
+      "groupName": "Terraform updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": ["terraform"]
     },
     {
       "description": [
