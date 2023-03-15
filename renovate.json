@@ -20,9 +20,9 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prConcurrentLimit": 1,
+  "prConcurrentLimit": 20,
   "prHourlyLimit": 500,
-  "branchConcurrentLimit": 1,
+  "branchConcurrentLimit": 20,
   "enabledManagers": [
     "dockerfile",
     "docker-compose",
