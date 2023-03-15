@@ -58,6 +58,15 @@
     },
     {
       "description": [
+        "github-actions: bundle all updates together"
+      ],
+      "labels": ["devDependencies", "Renovate", "github-actions"],
+      "groupName": "github actions updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": ["github-actions"]
+    },
+    {
+      "description": [
         "No major version updates"
       ],
       "matchUpdateTypes": ["major"],
