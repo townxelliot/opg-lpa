@@ -67,6 +67,23 @@
     },
     {
       "description": [
+        "No major version updates"
+      ],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": [
+        "dev tools: allow major updates"
+      ],
+      "labels": ["devDependencies", "Renovate", "DevTools"],
+      "groupName": "Dev Tools",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["composer"],
+      "matchPackageNames": ["vimeo/psalm", "phpunit/phpunit"]
+    },
+    {
+      "description": [
         "Github Actions: bundle all updates together"
       ],
       "labels": ["devDependencies", "Renovate", "GithubActions"],
@@ -82,23 +99,6 @@
       "groupName": "Terraform",
       "matchUpdateTypes": ["minor", "patch"],
       "matchManagers": ["terraform"]
-    },
-    {
-      "description": [
-        "dev tools: allow major updates"
-      ],
-      "labels": ["devDependencies", "Renovate", "DevTools"],
-      "groupName": "Dev Tools",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["composer"],
-      "matchPackageNames": ["vimeo/psalm", "phpunit/phpunit"]
-    },
-    {
-      "description": [
-        "No major version updates"
-      ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
     },
     {
       "description": [
