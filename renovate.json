@@ -26,16 +26,6 @@
   "packageRules": [
     {
       "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": ["devDependencies", "Renovate", "Cypress", "FORREAL"],
-      "groupName": "Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePrefixes": ["cypress"]
-    },
-    {
-      "description": [
         "No updates to postgres, redis, php or python docker images",
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
@@ -77,6 +67,16 @@
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
+    },
+    {
+      "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": ["devDependencies", "Renovate", "Cypress", "FORREAL2"],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePrefixes": ["cypress"]
     }
   ]
 }
