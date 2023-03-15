@@ -97,7 +97,6 @@
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
-    },
-
+    }
   ]
 }
