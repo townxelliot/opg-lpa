@@ -64,7 +64,7 @@
     {
       "description": [
         "composer and npm Minor and Patch updates (stable for 3 days)",
-        "These might be automerged once we're comfortable with Renovate."
+        "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
       "groupName": "minor and patch updates",
