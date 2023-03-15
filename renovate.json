@@ -4,9 +4,6 @@
   "branchPrefix": "renovate-",
   "includeForks": true,
   "commitMessageAction": "Renovate update",
-  "labels": ["Dependencies", "Renovate"],
-  "prConcurrentLimit": 0,
-  "branchConcurrentLimit": 0,
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": "before 5am on monday"
@@ -22,18 +19,20 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
+  "prConcurrentLimit": 10,
   "prHourlyLimit": 500,
+  "branchConcurrentLimit": 10,
   "enabledManagers": ["dockerfile", "docker-compose", "npm", "composer", "github-actions", "gomod", "terraform"],
   "packageRules": [
     {
       "description": [
         "cypress: bundle updates to package.json and dockerfile"
       ],
-      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "labels": ["devDependencies", "Renovate", "Cypress", "FORREAL"],
       "groupName": "Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
-      "matchPackageNames": ["cypress", "cypress/included"]
+      "matchPackagePrefixes": ["cypress"]
     },
     {
       "description": [
