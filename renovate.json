@@ -46,10 +46,10 @@
     },
     {
       "description": [
-        "dev tools: allow major updates only for dev tools"
+        "dev tools: allow major updates only for dev tools",
+        "note: this may fail if other packages depend on existing versions"
       ],
       "labels": ["devDependencies", "Renovate", "DevTools"],
-      "groupName": "Dev Tools",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["composer"],
       "matchPackageNames": ["vimeo/psalm", "phpunit/phpunit"]
