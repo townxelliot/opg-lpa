@@ -68,15 +68,16 @@
     },
     {
       "description": [
-        "No updates to postgres, redis, php or python docker images",
+        "No updates to postgres, redis, php, cypress or python docker images",
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
         "php: 8.2 upgrade needs to be managed manually",
+        "cypress: bundled with the npm updates",
         "python: to be removed"
       ],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres", "redis", "php", "python"],
+      "matchPackageNames": ["postgres", "redis", "php", "cypress", "python"],
       "enabled": false
     }
   ]
