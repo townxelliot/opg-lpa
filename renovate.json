@@ -1,25 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base", ":dependencyDashboard"
-  ],
+  "extends": ["config:base", ":dependencyDashboard"],
   "branchPrefix": "renovate-",
   "includeForks": true,
   "commitMessageAction": "Renovate update",
-  "labels": [
-    "Dependencies",
-    "Renovate"
-  ],
+  "labels": ["Dependencies", "Renovate"],
   "prConcurrentLimit": 0,
   "branchConcurrentLimit": 0,
   "lockFileMaintenance": { "enabled": true },
   "vulnerabilityAlerts": {
     "groupName": "Security Alerts",
-    "labels": [
-      "Dependencies",
-      "Renovate",
-      "SecurityAlert"
-    ],
+    "labels": ["Dependencies", "Renovate", "SecurityAlert"],
     "dependencyDashboardApproval": false,
     "stabilityDays": 0,
     "rangeStrategy": "update-lockfile",
@@ -62,41 +53,28 @@
     },
     {
       "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePatterns": ["cypress"]
+    },
+    {
+      "description": [
         "composer and npm Minor and Patch updates (stable for 3 days)",
         "These might be automerged once we're comfortable with Renovate."
       ],
       "automerge": false,
       "groupName": "minor and patch updates",
       "groupSlug": "all-minor-patch-updates",
-      "labels": [
-        "Dependencies",
-        "Renovate"
-      ],
-      "matchManagers": [
-        "composer",
-        "npm"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "labels": ["Dependencies", "Renovate"],
+      "matchManagers": ["composer", "npm"],
+      "matchUpdateTypes": ["minor", "patch"],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
-    },
-    {
-      "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": [
-        "devDependencies",
-        "Renovate",
-        "Cypress"
-      ],
-      "groupName": "Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackageNames": ["cypress"]
     }
   ]
 }
