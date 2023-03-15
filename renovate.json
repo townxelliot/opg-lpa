@@ -48,22 +48,20 @@
     },
     {
       "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePatterns": ["cypress"]
+    },
+    {
+      "description": [
         "No major version updates"
       ],
       "matchUpdateTypes": ["major"],
       "enabled": false
-    },
-    {
-      "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": ["devDependencies", "Renovate", "Cypress", "FORREAL4", "sweartogod"],
-      "groupName": "FOR THE LOVE OF GOD Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePrefixes": ["cypress", "@badeball", "@cypress"],
-      "matchPackageNames": ["cypress"],
-      "matchPackagePatterns": ["cypress"]
     },
     {
       "description": [
@@ -76,6 +74,7 @@
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
       "matchUpdateTypes": ["minor", "patch"],
+      "excludePackagePatterns": ["cypress"],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
