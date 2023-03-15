@@ -61,7 +61,7 @@
       "groupName": "FOR THE LOVE OF GOD Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePrefixes": ["cypress"],
+      "matchPackagePrefixes": ["cypress", "@badeball", "@cypress"],
       "matchPackageNames": ["cypress"],
       "matchPackagePatterns": ["cypress"]
     },
