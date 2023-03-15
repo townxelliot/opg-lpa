@@ -43,16 +43,6 @@
     },
     {
       "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": ["devDependencies", "Renovate", "Cypress"],
-      "groupName": "Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePatterns": ["cypress"]
-    },
-    {
-      "description": [
         "No updates to postgres, redis, php or python docker images",
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
@@ -63,6 +53,16 @@
       "matchManagers": ["dockerfile", "docker-compose"],
       "matchPackageNames": ["postgres", "redis", "php", "python"],
       "enabled": false
+    },
+    {
+      "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePatterns": ["cypress"]
     },
     {
       "description": [
