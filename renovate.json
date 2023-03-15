@@ -76,7 +76,7 @@
       ],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackagePatterns": ["postgres.*", "redis.*", "php.*", "python.*"],
+      "matchPackagePatterns": ["postgres", "redis", "php", "python"],
       "enabled": true
     }
   ]
