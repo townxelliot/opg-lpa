@@ -22,7 +22,7 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prHourlyLimit": 200,
+  "prHourlyLimit": 500,
   "enabledManagers": ["dockerfile", "docker-compose", "npm", "composer", "github-actions", "gomod", "terraform"],
   "packageRules": [
     {
@@ -43,16 +43,13 @@
     },
     {
       "description": [
-        "No updates to postgres, redis, php or python docker images",
-        "postgres: keep in sync with live",
-        "redis: keep in sync with live",
-        "php: 8.2 upgrade needs to be managed manually",
-        "python: to be removed"
+        "cypress: bundle updates to package.json and dockerfile"
       ],
+      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "groupName": "Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres", "redis", "php", "python"],
-      "enabled": false
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePatterns": ["cypress"]
     },
     {
       "description": [
@@ -71,13 +68,16 @@
     },
     {
       "description": [
-        "cypress: bundle updates to package.json and dockerfile"
+        "No updates to postgres, redis, php or python docker images",
+        "postgres: keep in sync with live",
+        "redis: keep in sync with live",
+        "php: 8.2 upgrade needs to be managed manually",
+        "python: to be removed"
       ],
-      "labels": ["devDependencies", "Renovate", "Cypress"],
-      "groupName": "Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePatterns": ["cypress"]
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchPackageNames": ["postgres", "redis", "php", "python"],
+      "enabled": false
     }
   ]
 }
