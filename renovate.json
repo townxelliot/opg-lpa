@@ -58,7 +58,7 @@
         "cypress: bundle updates to package.json and dockerfile"
       ],
       "labels": ["devDependencies", "Renovate", "Cypress", "FORREAL4", "sweartogod"],
-      "groupName": "Cypress updates",
+      "groupName": "FOR THE LOVE OF GOD Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
       "matchPackagePrefixes": ["cypress"],
