@@ -62,7 +62,7 @@
       ],
       "labels": ["devDependencies", "Renovate", "GithubActions"],
       "groupName": "Github Actions updates",
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
       "matchManagers": ["github-actions"]
     },
     {
