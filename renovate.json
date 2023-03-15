@@ -27,10 +27,16 @@
   "packageRules": [
     {
       "description": [
-        "No major version updates"
+        "No updates to postgres, redis, php, cypress or python docker images",
+        "postgres: keep in sync with live",
+        "redis: keep in sync with live",
+        "php: 8.2 upgrade needs to be managed manually",
+        "python: to be removed"
       ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchPackagePatterns": ["postgres", "redis", "php", "python"],
+      "enabled": true
     },
     {
       "description": [
@@ -53,6 +59,13 @@
     },
     {
       "description": [
+        "No major version updates"
+      ],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": [
         "composer and npm Minor and Patch updates (stable for 3 days)",
         "These might be automerged once we're comfortable with Renovate"
       ],
@@ -65,19 +78,6 @@
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
-    },
-    {
-      "description": [
-        "No updates to postgres, redis, php, cypress or python docker images",
-        "postgres: keep in sync with live",
-        "redis: keep in sync with live",
-        "php: 8.2 upgrade needs to be managed manually",
-        "python: to be removed"
-      ],
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackagePatterns": ["postgres", "redis", "php", "python"],
-      "enabled": true
     }
   ]
 }
