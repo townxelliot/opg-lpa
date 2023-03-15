@@ -35,29 +35,8 @@
   "packageRules": [
     {
       "description": [
-        "No updates to postgres, redis, php or python docker images",
-        "postgres: keep in sync with live",
-        "redis: keep in sync with live",
-        "php: 8.2 upgrade needs to be managed manually",
-        "python: to be removed"
-      ],
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres", "redis", "php", "python"],
-      "enabled": false
-    },
-    {
-      "description": [
-        "No updates to PHP PDF libraries (too sensitive and risky)"
-      ],
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["composer"],
-      "matchPackageNames": ["tecnickcom/tcpdf", "mikehaertl/php-pdftk"],
-      "enabled": false
-    },
-    {
-      "description": [
-        "cypress: bundle updates to package.json and dockerfile"
+        "cypress: bundle updates to package.json and dockerfile",
+        "allow major version updates"
       ],
       "labels": ["devDependencies", "Renovate", "Cypress"],
       "groupName": "Cypress",
@@ -67,14 +46,7 @@
     },
     {
       "description": [
-        "No major version updates"
-      ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
-    },
-    {
-      "description": [
-        "dev tools: allow major updates"
+        "dev tools: allow major updates only for dev tools"
       ],
       "labels": ["devDependencies", "Renovate", "DevTools"],
       "groupName": "Dev Tools",
@@ -99,6 +71,37 @@
       "groupName": "Terraform",
       "matchUpdateTypes": ["minor", "patch"],
       "matchManagers": ["terraform"]
+    },
+    {
+      "description": [
+        "No updates to postgres, redis, php or python docker images",
+        "postgres: keep in sync with live",
+        "redis: keep in sync with live",
+        "php: 8.2 upgrade needs to be managed manually",
+        "python: to be removed"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchPackageNames": ["postgres", "redis", "php", "python"],
+      "enabled": false
+    },
+    {
+      "description": [
+        "No updates to PHP PDF libraries (too sensitive and risky)"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["composer"],
+      "matchPackageNames": ["tecnickcom/tcpdf", "mikehaertl/php-pdftk"],
+      "enabled": false
+    },
+    {
+      "description": [
+        "No major version updates except for dev tools"
+      ],
+      "matchUpdateTypes": ["major"],
+      "excludePackageNames": ["vimeo/psalm", "phpunit/phpunit"],
+      "excludePackagePatterns": ["cypress"],
+      "enabled": false
     },
     {
       "description": [
