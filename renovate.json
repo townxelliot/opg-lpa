@@ -49,7 +49,7 @@
       "groupName": "Cypress updates",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePatterns": ["cypress"]
+      "matchPackagePatterns": ["cypress.*"]
     },
     {
       "description": [
@@ -72,13 +72,12 @@
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
         "php: 8.2 upgrade needs to be managed manually",
-        "cypress: bundled with the npm updates",
         "python: to be removed"
       ],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose"],
-      "matchPackageNames": ["postgres", "redis", "php", "cypress", "python"],
-      "enabled": false
+      "matchPackagePatterns": ["postgres.*", "redis.*", "php.*", "python.*"],
+      "enabled": true
     }
   ]
 }
