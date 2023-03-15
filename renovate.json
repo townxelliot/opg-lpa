@@ -33,20 +33,6 @@
   "packageRules": [
     {
       "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": [
-        "devDependencies",
-        "Renovate",
-        "Cypress"
-      ],
-      "groupName": "Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackageNames": ["cypress"]
-    },
-    {
-      "description": [
         "No major version updates"
       ],
       "matchUpdateTypes": ["major"],
@@ -97,6 +83,20 @@
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
+    },
+    {
+      "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": [
+        "devDependencies",
+        "Renovate",
+        "Cypress"
+      ],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackageNames": ["cypress"]
     }
   ]
 }
