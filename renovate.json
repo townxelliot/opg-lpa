@@ -63,7 +63,7 @@
       "matchManagers": ["dockerfile", "npm"],
       "matchPackagePrefixes": ["cypress"],
       "matchPackageNames": ["cypress"],
-      "matchPackagePatterns": ["cypress*"]
+      "matchPackagePatterns": ["cypress"]
     },
     {
       "description": [
