@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "branchPrefix": "renovate-",
-  "includeForks": true,
+  "labels": ["Renovate", "Dependencies"],
   "commitMessageAction": "Renovate update",
   "lockFileMaintenance": {
     "enabled": true,
@@ -19,10 +19,18 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prConcurrentLimit": 10,
+  "prConcurrentLimit": 1,
   "prHourlyLimit": 500,
-  "branchConcurrentLimit": 10,
-  "enabledManagers": ["dockerfile", "docker-compose", "npm", "composer", "github-actions", "gomod", "terraform"],
+  "branchConcurrentLimit": 1,
+  "enabledManagers": [
+    "dockerfile",
+    "docker-compose",
+    "npm",
+    "composer",
+    "github-actions",
+    "gomod",
+    "terraform"
+  ],
   "packageRules": [
     {
       "description": [
@@ -51,7 +59,7 @@
         "cypress: bundle updates to package.json and dockerfile"
       ],
       "labels": ["devDependencies", "Renovate", "Cypress"],
-      "groupName": "Cypress updates",
+      "groupName": "Cypress",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "npm"],
       "matchPackagePatterns": ["cypress"]
@@ -61,7 +69,7 @@
         "Github Actions: bundle all updates together"
       ],
       "labels": ["devDependencies", "Renovate", "GithubActions"],
-      "groupName": "Github Actions updates",
+      "groupName": "Github Actions",
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "matchManagers": ["github-actions"]
     },
@@ -70,9 +78,19 @@
         "Terraform: bundle all updates together"
       ],
       "labels": ["devDependencies", "Renovate", "Terraform"],
-      "groupName": "Terraform updates",
+      "groupName": "Terraform",
       "matchUpdateTypes": ["minor", "patch"],
       "matchManagers": ["terraform"]
+    },
+    {
+      "description": [
+        "dev tools: allow major updates"
+      ],
+      "labels": ["devDependencies", "Renovate", "DevTools"],
+      "groupName": "Dev Tools",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["composer"],
+      "matchPackageNames": ["vimeo/psalm", "phpunit/phpunit"]
     },
     {
       "description": [
