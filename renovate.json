@@ -27,6 +27,16 @@
   "packageRules": [
     {
       "description": [
+        "cypress: bundle updates to package.json and dockerfile"
+      ],
+      "labels": ["devDependencies", "Renovate", "Cypress"],
+      "groupName": "Cypress updates",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchManagers": ["dockerfile", "npm"],
+      "matchPackagePatterns": ["cypress.*"]
+    },
+    {
+      "description": [
         "No updates to postgres, redis, php, cypress or python docker images",
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
@@ -46,16 +56,6 @@
       "matchManagers": ["composer"],
       "matchPackageNames": ["tecnickcom/tcpdf", "mikehaertl/php-pdftk"],
       "enabled": false
-    },
-    {
-      "description": [
-        "cypress: bundle updates to package.json and dockerfile"
-      ],
-      "labels": ["devDependencies", "Renovate", "Cypress"],
-      "groupName": "Cypress updates",
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchManagers": ["dockerfile", "npm"],
-      "matchPackagePatterns": ["cypress.*"]
     },
     {
       "description": [
