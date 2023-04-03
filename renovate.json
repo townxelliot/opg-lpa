@@ -109,7 +109,7 @@
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates",
+      "groupName": "minor and patch updates 8.2",
       "groupSlug": "all-minor-patch-updates",
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
@@ -127,7 +127,7 @@
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates",
+      "groupName": "minor and patch updates 8.1",
       "groupSlug": "all-minor-patch-updates",
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
