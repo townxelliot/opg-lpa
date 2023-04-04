@@ -109,8 +109,8 @@
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates 8.2",
-      "groupSlug": "all-minor-patch-updates",
+      "groupName": "minor and patch updates (PHP 8.2, npm)",
+      "groupSlug": "all-minor-patch-updates-82",
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
       "matchUpdateTypes": ["minor", "patch"],
@@ -127,8 +127,8 @@
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates 8.1",
-      "groupSlug": "all-minor-patch-updates",
+      "groupName": "minor and patch updates (PHP 8.1, npm)",
+      "groupSlug": "all-minor-patch-updates-81",
       "labels": ["Dependencies", "Renovate"],
       "matchManagers": ["composer", "npm"],
       "matchUpdateTypes": ["minor", "patch"],
