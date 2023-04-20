@@ -128,7 +128,7 @@
       ],
       "prCreation": "immediate",
       "prPriority": 4,
-      "stabilityDays": 3
+      "stabilityDays": 0
     },
     {
       "description": [
@@ -146,7 +146,7 @@
       "ignorePaths": ["./service-admin/composer.json"],
       "prCreation": "immediate",
       "prPriority": 4,
-      "stabilityDays": 3
+      "stabilityDays": 0
     },
     {
       "description": [
