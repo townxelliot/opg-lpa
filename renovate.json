@@ -120,7 +120,12 @@
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
-      "ignorePaths": ["**/service-front/**", "**/service-api/**", "**/service-pdf/**", "**/shared/**"],
+      "ignorePaths": [
+        "./service-front/composer.json",
+        "./service-api/composer.json",
+        "./service-pdf/composer.json",
+        "./shared/composer.json"
+      ],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
@@ -138,7 +143,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
-      "ignorePaths": ["**/service-admin/**"],
+      "ignorePaths": ["./service-admin/composer.json"],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 3
