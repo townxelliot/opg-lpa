@@ -121,10 +121,14 @@
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
       "ignorePaths": [
-        "./service-front/composer.json",
-        "./service-api/composer.json",
-        "./service-pdf/composer.json",
-        "./shared/composer.json"
+        "service-front/composer.json",
+        "service-front/composer-lock.json",
+        "service-api/composer.json",
+        "service-api/composer-lock.json",
+        "service-pdf/composer.json",
+        "service-pdf/composer-lock.json",
+        "shared/composer.json",
+        "shared/composer-lock.json"
       ],
       "prCreation": "immediate",
       "prPriority": 4,
@@ -143,7 +147,10 @@
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
-      "ignorePaths": ["./service-admin/composer.json"],
+      "ignorePaths": [
+        "service-admin/composer.json",
+        "service-admin/composer-lock.json"
+      ],
       "prCreation": "immediate",
       "prPriority": 4,
       "stabilityDays": 0

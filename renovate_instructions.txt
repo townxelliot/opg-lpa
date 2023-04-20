@@ -1,0 +1,41 @@
+To locally test which PRs Renovate will create, you'll still need to put your renovate.json into a repo.
+
+I used a fork of our main repo. I then disabled all the github actions.
+
+Install renovate.
+
+Note that it doesn't appear to correctly set up scripts on MacOS, so I had to add two scripts myself:
+
+```
+% cat ~/moj/scripts/renovate
+node /usr/local/lib/node_modules/renovate/dist/renovate.js $*
+
+% cat ~/moj/scripts/renovate-config-validator
+node /usr/local/lib/node_modules/renovate/dist/config-validator.js $*
+```
+
+Once this is done, you can validate the config (this can be done without a repo):
+
+```
+% renovate-config-validator
+ INFO: Validating renovate.json
+ INFO: Config validated successfully
+```
+
+This is useful if you make changes, before you push them to your repo and realise you broke something.
+
+You will also need to onboard the repo with Renovate, by [adding Renovate as an app to the repo](https://github.com/marketplace/renovate).
+
+Once done, you can view your onboarded repos at https://app.renovatebot.com/dashboard
+
+To do a dry run and see which PRs Renovate would open, you first need a github token. I generated a classic one as the fine-grained one didn't seem to work.
+
+Then:
+
+```
+renovate --dry-run --include-forks=true --token=<github token> townxelliot/opg-lpa
+```
+
+(replacing <github token> with yours, and townxelliot/opg-lpa with your clone repo)
+
+[This page explains how to change Renovate config](https://github.com/renovatebot/renovate/blob/main/docs/usage/configuration-options.md)
