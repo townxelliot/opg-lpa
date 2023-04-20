@@ -109,26 +109,19 @@
     },
     {
       "description": [
-        "composer and npm minor and patch updates (PHP 8.2, stable for 3 days)",
+        "composer minor and patch updates (PHP 8.2, stable for 3 days)",
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates (PHP 8.2, npm)",
-      "groupSlug": "all-minor-patch-updates-82",
+      "groupName": "minor and patch updates (PHP 8.2)",
+      "groupSlug": "all-minor-patch-updates-php82",
       "labels": ["Dependencies", "Renovate"],
-      "matchManagers": ["composer", "npm", "pip_requirements", "pip-compile", "pipenv", "pyenv", "setup-cfg", "pip_setup"],
+      "matchManagers": ["composer"],
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
-      "ignorePaths": [
-        "service-front/composer.json",
-        "service-front/composer-lock.json",
-        "service-api/composer.json",
-        "service-api/composer-lock.json",
-        "service-pdf/composer.json",
-        "service-pdf/composer-lock.json",
-        "shared/composer.json",
-        "shared/composer-lock.json"
+      "includePaths": [
+        "**/service-admin/composer**"
       ],
       "prCreation": "immediate",
       "prPriority": 4,
@@ -136,20 +129,40 @@
     },
     {
       "description": [
-        "composer and npm minor and patch updates (PHP 8.1, stable for 3 days)",
+        "composer minor and patch updates (PHP 8.1, stable for 3 days)",
         "These might be automerged once we're comfortable with Renovate"
       ],
       "automerge": false,
-      "groupName": "minor and patch updates (PHP 8.1, npm)",
-      "groupSlug": "all-minor-patch-updates-81",
+      "groupName": "minor and patch updates (PHP 8.1)",
+      "groupSlug": "all-minor-patch-updates-php81",
       "labels": ["Dependencies", "Renovate"],
-      "matchManagers": ["composer", "npm"],
+      "matchManagers": ["composer"],
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
-      "ignorePaths": [
-        "service-admin/composer.json",
-        "service-admin/composer-lock.json"
+      "includePaths": [
+        "**/service-front/composer**",
+        "**/service-api/composer**",
+        "**/service-pdf/composer**",
+        "**/shared/composer**"
+      ],
+      "prCreation": "immediate",
+      "prPriority": 4,
+      "stabilityDays": 0
+    },
+    {
+      "description": [
+        "npm minor and patch updates (stable for 3 days)",
+        "These might be automerged once we're comfortable with Renovate"
+      ],
+      "automerge": false,
+      "groupName": "minor and patch updates (npm)",
+      "groupSlug": "all-minor-patch-updates-npm",
+      "labels": ["Dependencies", "Renovate"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "includePaths": [
+        "**/package.json"
       ],
       "prCreation": "immediate",
       "prPriority": 4,
