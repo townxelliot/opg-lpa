@@ -4,7 +4,6 @@
   "branchPrefix": "renovate-",
   "labels": ["Renovate", "Dependencies"],
   "commitMessageAction": "Renovate update",
-  "renovateFork": true,
   "includeForks": true,
   "lockFileMaintenance": {
     "enabled": false
@@ -20,9 +19,9 @@
     "prCreation": "immediate",
     "prPriority": 5
   },
-  "prConcurrentLimit": 10,
-  "prHourlyLimit": 10,
-  "branchConcurrentLimit": 10,
+  "prConcurrentLimit": 1,
+  "prHourlyLimit": 1,
+  "branchConcurrentLimit": 1,
   "enabledManagers": [
     "dockerfile",
     "docker-compose",
@@ -80,11 +79,10 @@
     },
     {
       "description": [
-        "No updates to postgres, redis, php or python docker images and composer versions",
+        "No updates to postgres, redis, php or python docker images",
         "postgres: keep in sync with live",
         "redis: keep in sync with live",
-        "php: 8.2 upgrade needs to be managed manually",
-        "python: to be removed"
+        "php: 8.2 upgrade needs to be managed manually"
       ],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "matchManagers": ["dockerfile", "docker-compose", "composer"],
@@ -118,7 +116,7 @@
       "groupName": "minor and patch updates (PHP 8.2, npm)",
       "groupSlug": "all-minor-patch-updates-82",
       "labels": ["Dependencies", "Renovate"],
-      "matchManagers": ["composer", "npm"],
+      "matchManagers": ["composer", "npm", "pip_requirements", "pip-compile", "pipenv", "pyenv", "setup-cfg", "pip_setup"],
       "matchUpdateTypes": ["minor", "patch"],
       "excludePackagePatterns": ["cypress"],
       "excludePackageNames": ["php"],
